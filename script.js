@@ -87,7 +87,7 @@ const fireGoodEvent = (evt) => {
         if (Object.keys(event)[0] === eventName) {
             health += event[eventName].hp
             healthMeter.innerText = `Health: ${health}`
-            progressBar.setAttribute('style', `width: ${health / 2}%`)
+            progressBar.setAttribute('style', `width: ${100 - (health / 2)}%`)
             randomizeEvents()
         }
     }
@@ -101,7 +101,7 @@ const fireBadEvent = (evt) => {
         if (Object.keys(event)[0] === eventName) {
             health += event[eventName].hp
             healthMeter.innerText = `Health: ${health}`
-            progressBar.setAttribute('style', `width: ${health / 2}%`)
+            progressBar.setAttribute('style', `width: ${100 - (health / 2)}%`)
             randomizeEvents()
         }
     }
