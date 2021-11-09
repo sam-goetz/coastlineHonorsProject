@@ -6,6 +6,7 @@ let health = 100;
 const goodButton = document.getElementById('goodButton')
 const badButton = document.getElementById('badButton')
 const healthMeter = document.getElementById('healthMeter')
+const progressBar = document.getElementById('progressBar')
 
 let goodArray = [
     {
@@ -86,6 +87,7 @@ const fireGoodEvent = (evt) => {
         if (Object.keys(event)[0] === eventName) {
             health += event[eventName].hp
             healthMeter.innerText = `Health: ${health}`
+            progressBar.setAttribute('style', `width: ${health / 2}%`)
             randomizeEvents()
         }
     }
@@ -99,6 +101,7 @@ const fireBadEvent = (evt) => {
         if (Object.keys(event)[0] === eventName) {
             health += event[eventName].hp
             healthMeter.innerText = `Health: ${health}`
+            progressBar.setAttribute('style', `width: ${health / 2}%`)
             randomizeEvents()
         }
     }
