@@ -7,6 +7,14 @@ const goodButton = document.getElementById('goodButton')
 const badButton = document.getElementById('badButton')
 const healthMeter = document.getElementById('healthMeter')
 const progressBar = document.getElementById('progressBar')
+progressBar.addEventListener("transitionend", () => {
+    if (health <= 0) {
+        alert('The coastline was destroyed!')
+        health = 100;
+        healthMeter.innerText = `Health: ${health}`
+        progressBar.setAttribute('style', `width: ${100 - (health / 2)}%`)
+    }
+});
 
 let goodArray = [
     {
@@ -56,7 +64,7 @@ let badArray = [
     },
     {
         seaLevelRise: {
-            display: 'Sea Leven Rise',
+            display: 'Sea Level Rise',
             hp: -5
         }
     },

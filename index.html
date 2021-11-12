@@ -12,21 +12,22 @@
 
 </head>
 
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-3 d-flex flex-column justify-content-center ">
+<body class="container">
+    <div class="container" id="main-box">
+
+        <div class="row align-items-center">
+            <div class="col-3 d-flex flex-column justify-content-center">
                 <div class="justify-content-center d-flex">
-                    <h2>
+                    <h3 class="">
                         Choose an Event
-                    </h2>
+                    </h3>
                 </div>
 
                 <div class="container">
                     <div class="row">
                         <div class="col d-flex justify-content-between">
-                            <button class="btn btn-primary" id="goodButton">good</button>
-                            <button class="btn btn-danger" id="badButton">Hurricane</button>
+                            <button class="btn btn-primary m-1" id="goodButton">good</button>
+                            <button class="btn btn-danger m-1" id="badButton">Hurricane</button>
                         </div>
                     </div>
                     <div class='row'>
@@ -39,7 +40,7 @@
             <div class="col-9 d-flex flex-column justify-content-center">
                 <div>
 
-                    <div class="progress" style="height: 10rem">
+                    <div class="progress bg-warning" style="height: 10rem">
                         <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50"
                             aria-valuemin="0" aria-valuemax="200" id="progressBar"></div>
 
